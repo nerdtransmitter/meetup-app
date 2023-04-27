@@ -1,4 +1,5 @@
 import React from 'react';
+import MeetupList from '../components/meetups/MeetupList';
 
 const DUMMY_DATA = [
   {
@@ -21,13 +22,15 @@ const DUMMY_DATA = [
   },
 ];
 
-function AllMeetUpsPage() {
+function AllMeetUpsPage(me) {
   return (
-    <section>
+    // <Container maxWidth="sm">
+    <div>
       <h1>All Meetups</h1>
-      
-    </section>
-  )
+      <MeetupList meetups={DUMMY_DATA} />
+    </div>
+    /* </Container> */
+  );
 }
 
 export default AllMeetUpsPage;
